@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+<link rel="stylesheet" href="./style.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+
+    <div class="inputContent">
+        <span onclick="Toggle()"><img width="34" style="margin-top: 12px; cursor: pointer;" src="./torch.png" /></span>
+        <input type="password" id="input" class="input" placeholder="Senha..." />
+        <div id="light" class="light"></div>
+    </div>
+
+</body>
+<script>
+    function Toggle(){
+        var element = document.getElementById("light");
+        element.classList.toggle("active");
+        var x = document.getElementById("input");
+        x.classList.toggle("active2");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+    }
+</script>
+</html>
